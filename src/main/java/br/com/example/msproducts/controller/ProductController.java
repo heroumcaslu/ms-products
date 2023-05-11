@@ -47,7 +47,7 @@ public class ProductController  {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<?> updateProduct(@PathVariable(value = "id"), @RequestBody Product product) {
+	public ResponseEntity<?> updateProduct(@PathVariable(value = "id") String id, @RequestBody Product product) {
 
 		return ResponseEntity.ok(productRepository.save(product));
 
