@@ -39,7 +39,7 @@ public class ProductController  {
 		
 	}
 	
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<?> findProductById(@PathVariable String id) {
 
 		return ResponseEntity.ok(productRepository.findById(id));
@@ -53,7 +53,7 @@ public class ProductController  {
 
 	}
 	
-	@DeleteMapping("{id}")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<?> deleteProduct(@PathVariable String id) {
 
 		return ResponseEntity.ok(productRepository.delete(id));
